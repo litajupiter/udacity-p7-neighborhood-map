@@ -1,6 +1,6 @@
 ## Introduction
 
-This version of the Udacity Neighborhood Map Project is by Brianne Williams for the Front-End Web Developer (FEND) Nanodegree Program. References: Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony
+This version of the Udacity Neighborhood Map Project is by Brianne Williams for the Front-End Web Developer (FEND) Nanodegree Program. References: Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony, LatLong.net, Stack Overflow
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
