@@ -23,9 +23,10 @@ class App extends Component {
     const parameters = {
       client_id: "L5DKG5X0DKH5JYOCWVFLRP1UPSWZJKJY51HYMEK2CFCSD5KV",
       client_secret: "APCJA50MQOTWPKJXYABRI0C1NQZCHL0VD40NWAEODBRSEKQU",
-      query: "food",
+      query: "coffee",
       near: "Reykjavik",
-      v: "20182507"
+      v: "20182507",
+      limit: 10
     }
 
 //like fetchAPI
@@ -49,14 +50,13 @@ class App extends Component {
     })
 
     // Create An InfoWindow
-    var infowindow = new window.google.maps.InfoWindow()
+    const infowindow = new window.google.maps.InfoWindow()
+
     // Display Dynamic Markers
-    this.state.venues.map(myVenue => {
-
-      var contentString = `${myVenue.venue.name}`
-
+    this.state.venues.forEach(myVenue => {
+      const contentString = `${myVenue.venue.name}`
       // Create A Marker
-      var marker = new window.google.maps.Marker({
+      const marker = new window.google.maps.Marker({
         position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
         map: map,
         title: myVenue.venue.name
@@ -68,7 +68,7 @@ class App extends Component {
         infowindow.setContent(contentString)
         // Open An InfoWindow
         infowindow.open(map, marker);
-      })
+      }) 
     })
   }
 
@@ -82,8 +82,8 @@ class App extends Component {
 }
 
 function loadScript(url) {
-  var index = window.document.getElementsByTagName("script")[0]
-  var script = window.document.createElement("script")
+  const index = window.document.getElementsByTagName("script")[0]
+  const script = window.document.createElement("script")
   script.src = url
   script.async = true
   script.defer = true
