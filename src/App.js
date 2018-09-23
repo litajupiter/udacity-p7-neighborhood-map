@@ -24,7 +24,7 @@ class App extends Component {
       client_id: "L5DKG5X0DKH5JYOCWVFLRP1UPSWZJKJY51HYMEK2CFCSD5KV",
       client_secret: "APCJA50MQOTWPKJXYABRI0C1NQZCHL0VD40NWAEODBRSEKQU",
       query: "food",
-      near: "Sydney",
+      near: "Reykjavik",
       v: "20182507"
     }
 
@@ -44,7 +44,7 @@ class App extends Component {
 
     // Create A Map
     const map = new window.google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
+      center: {lat: 64.150420, lng: -21.932570},
       zoom: 8
     })
 
