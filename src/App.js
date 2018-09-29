@@ -26,6 +26,7 @@ class App extends Component {
       client_secret: "APCJA50MQOTWPKJXYABRI0C1NQZCHL0VD40NWAEODBRSEKQU",
       query: "coffee",
       ll: "64.150420, -21.932570",
+      radius: "2000",
       v: "20180901",
       limit: 10
     }
