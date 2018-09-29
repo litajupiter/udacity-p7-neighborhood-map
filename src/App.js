@@ -17,7 +17,7 @@ class App extends Component {
     loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyDIZ-5GLvu0xUA2f6vwt82p2R8W2au8aDc&callback=initMap")
     window.initMap = this.initMap
   }
-
+//used LatLong.net to get ll for Harpa Concert Hall in Reykjavik, Iceland
   getVenues = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?"
     const parameters = {
