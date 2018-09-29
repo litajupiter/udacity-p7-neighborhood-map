@@ -18,6 +18,7 @@ class App extends Component {
     window.initMap = this.initMap
   }
 //used LatLong.net to get ll for Harpa Concert Hall in Reykjavik, Iceland
+//used Foursquare API for venue recommendations/venue information
   getVenues = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?"
     const parameters = {
