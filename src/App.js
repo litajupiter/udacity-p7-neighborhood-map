@@ -68,7 +68,7 @@ class App extends Component {
         infowindow.setContent(contentString)
         // Open An InfoWindow
         infowindow.open(map, marker);
-      }) 
+      })
     })
   }
 
