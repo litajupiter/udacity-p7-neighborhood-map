@@ -48,7 +48,7 @@ class App extends Component {
     // Create A Map
     const map = new window.google.maps.Map(document.getElementById('map'), {
       center: {lat: 64.150420, lng: -21.932570},
-      zoom: 13
+      zoom: 14
     })
 
     // Create An InfoWindow
