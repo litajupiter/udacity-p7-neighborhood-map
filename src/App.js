@@ -24,7 +24,7 @@ class App extends Component {
       client_id: "L5DKG5X0DKH5JYOCWVFLRP1UPSWZJKJY51HYMEK2CFCSD5KV",
       client_secret: "APCJA50MQOTWPKJXYABRI0C1NQZCHL0VD40NWAEODBRSEKQU",
       query: "coffee",
-      near: "Reykjavik",
+      ll: "64.150420, -21.932570",
       v: "20182507",
       limit: 10
     }
