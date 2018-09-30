@@ -45,16 +45,13 @@ class App extends Component {
   }
 
   initMap = () => {
-
     // Create A Map
     const map = new window.google.maps.Map(document.getElementById('map'), {
       center: {lat: 64.150420, lng: -21.932570},
       zoom: 14
     })
-
     // Create An InfoWindow
     const infowindow = new window.google.maps.InfoWindow()
-
     // Display Dynamic Markers
     this.state.venues.forEach(myVenue => {
       const contentString = `${myVenue.venue.name}`
@@ -64,12 +61,8 @@ class App extends Component {
         map: map,
         title: myVenue.venue.name
       })
-
-      // Click on a marker
       marker.addListener('click', function() {
-        // Change the content
         infowindow.setContent(contentString)
-        // Open An InfoWindow
         infowindow.open(map, marker);
       })
     })
