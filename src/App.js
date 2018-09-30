@@ -29,7 +29,7 @@ class App extends Component {
       ll: "64.150420, -21.932570",
       radius: "2000",
       v: "20180901",
-      limit: 10
+      limit: 15
     }
 
 //like fetchAPI
