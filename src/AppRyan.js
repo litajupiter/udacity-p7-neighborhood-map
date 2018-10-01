@@ -36,7 +36,7 @@ class AppRyan extends Component {
     this.setState({ showModal: true });
   }
 
-  toggleSideBar() {
+  toggleSidebar() {
     this.setState(state => ({ sidebarOpen: !state.sidebarOpen }));
   }
 
@@ -76,7 +76,7 @@ class AppRyan extends Component {
       this.infowindow.open(this.map, marker);
       this.map.panBy(0, -125);
       if(window.innerWidth < 769) {
-        this.toggleSideBar();
+        this.toggleSidebar();
       }
     }
   }
@@ -160,7 +160,7 @@ class AppRyan extends Component {
   menuKeyEnter(event) {
     var code = event.keyCode || event.which;
     if(code === 13) {
-      this.toggleSideBar();
+      this.toggleSidebar();
     }
   }
 
@@ -180,7 +180,7 @@ class AppRyan extends Component {
         <NavBar
           menuText={menuText}
           sidebarOpen={this.state.sidebarOpen}
-          toggleSideBar={this.toggleSideBar}
+          toggleSidebar={this.toggleSidebar}
           li_click={this.li_click}
           menuKeyEnter={this.menuKeyEnter} />
 
@@ -190,7 +190,7 @@ class AppRyan extends Component {
           query={this.state.query}
           filtered={this.state.filtered}
           sidebarOpen={this.state.sidebarOpen}
-          toggleSideBar={this.toggleSideBar}
+          toggleSidebar={this.toggleSidebar}
           liKeyEnter={this.liKeyEnter}
           filterVenues={this.filterVenues}
           li_click={this.li_click}
