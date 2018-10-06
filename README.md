@@ -1,6 +1,10 @@
 ## Introduction
 
-This version of the Udacity Neighborhood Map Project is by Brianne Williams for the Front-End Web Developer (FEND) Nanodegree Program. References: Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony, Tutorial Requests: FEND Project 7-Walk Through & Complete Guide (LONG) YouTube video by Ryan Waite, LatLong.net, Stack Overflow
+This version of the Udacity Neighborhood Map Project is by Brianne Williams for the Front-End Web Developer (FEND) Nanodegree Program. It displays up to fifteen recommended coffee venues near Harpa Concert Hall and Conference Centre in Reykjavik, Iceland. Third party API data is provided by Foursquare.
+
+Note: Service Worker will only work in a production environment.
+
+References: Udacity React and API Course Materials, Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony, Tutorial Requests: FEND Project 7-Walk Through & Complete Guide (LONG) YouTube video by Ryan Waite, the Udacity Front-End Web Developer Nanodegree Support Facebook Group, LatLong.net, Stack Overflow.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
