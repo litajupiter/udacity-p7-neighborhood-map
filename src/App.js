@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Map from './components/Map.js';
+import ListView from './components/ListView.js';
 import axios from 'axios';
 
 class App extends Component {
@@ -74,6 +75,7 @@ class App extends Component {
   render() {
     return (
       <div id="app-container">
+        <ListView />
         <Map />
       </div>
     );
