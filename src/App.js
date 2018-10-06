@@ -54,7 +54,7 @@ class App extends Component {
     const infowindow = new window.google.maps.InfoWindow()
     // Display Dynamic Markers
     this.state.venues.forEach(myVenue => {
-      const contentString = `${myVenue.venue.name}`
+      const infoString = `<h4>${myVenue.venue.name}</h4><p>Street Address: ${myVenue.venue.location.address}</p><p>Distance from Harpa: ${myVenue.venue.location.distance} meters</p>`
       // Create A Marker
       const marker = new window.google.maps.Marker({
         position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
@@ -64,7 +64,7 @@ class App extends Component {
         animation: window.google.maps.Animation.DROP
       })
       marker.addListener('click', function() {
-        infowindow.setContent(contentString)
+        infowindow.setContent(infoString)
         infowindow.open(map, marker);
       })
     })
