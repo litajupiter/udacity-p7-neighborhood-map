@@ -64,6 +64,12 @@ class App extends Component {
         animation: window.google.maps.Animation.DROP
       })
       marker.addListener('click', function() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(window.google.maps.Animation.BOUNCE);
+        }
+        setTimeout(() => { marker.setAnimation(null) }, 1000);
         infowindow.setContent(infoString)
         infowindow.open(map, marker);
       })
