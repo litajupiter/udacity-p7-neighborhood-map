@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-class SideBar extends Component {
+class ListView extends Component {
   render() {
     return();
   }
 }
+
+export default ListView;
