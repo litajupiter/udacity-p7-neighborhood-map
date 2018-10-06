@@ -19,7 +19,7 @@ class App extends Component {
     window.initMap = this.initMap
   }
 //used LatLong.net to get ll for Harpa Concert Hall in Reykjavik, Iceland
-//used Foursquare API for venue recommendations/venue information
+//used Foursquare API for venue recommendations/information
   getVenues = () => {
     const endPoint = "https://api.foursquare.com/v2/venues/explore?"
     const parameters = {
@@ -32,7 +32,7 @@ class App extends Component {
       limit: 15
     }
 
-//like fetchAPI
+//using axios to fetch the data
     axios.get(endPoint + new URLSearchParams(parameters))
       .then(response => {
         this.setState({
