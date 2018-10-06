@@ -59,7 +59,9 @@ class App extends Component {
       const marker = new window.google.maps.Marker({
         position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
         map: map,
-        title: myVenue.venue.name
+        title: myVenue.venue.name,
+        id: myVenue.venue.id,
+        animation: window.google.maps.Animation.DROP
       })
       marker.addListener('click', function() {
         infowindow.setContent(contentString)
@@ -70,7 +72,9 @@ class App extends Component {
 
   render() {
     return (
-      <Map />
+      <div id="app-container">
+        <Map />
+      </div>
     );
   }
 }
