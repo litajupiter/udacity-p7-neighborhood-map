@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Map from './components/Map.js'
-
-import axios from 'axios'
+import Map from './components/Map.js';
+import axios from 'axios';
 
 class App extends Component {
 
@@ -45,17 +44,13 @@ class App extends Component {
   }
 
   initMap = () => {
-    // Create A Map
     const map = new window.google.maps.Map(document.getElementById('map'), {
       center: {lat: 64.150420, lng: -21.932570},
       zoom: 14
     })
-    // Create An InfoWindow
     const infowindow = new window.google.maps.InfoWindow()
-    // Display Dynamic Markers
     this.state.venues.forEach(myVenue => {
       const infoString = `<h4>${myVenue.venue.name}</h4><p>Street Address: ${myVenue.venue.location.address}</p><p>Distance from Harpa: ${myVenue.venue.location.distance} meters</p>`
-      // Create A Marker
       const marker = new window.google.maps.Marker({
         position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
         map: map,
