@@ -41,14 +41,18 @@ html, body {
 
 #list-venues {
   position: absolute;
+  top: 60px;
   z-index: 100;
-  height: calc(100vh - 40px);
-  width: 325px;
+  height: calc(100vh - 60px);
+  width: 200px;
   max-width: 100%;
-  overflow-y: scroll;
+  padding-left: 10px;
+  padding-top: 10px;
+  background-color: white;
+  opacity: 0.8;
 }
 
 ul {
   list-style: none;
-  margin-left: 0px;
+  padding-left: 0px;
 }
