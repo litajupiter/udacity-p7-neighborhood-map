@@ -75,7 +75,9 @@ class App extends Component {
   render() {
     return (
       <div id="app-container">
-        <ListView />
+        <ListView
+          venues={this.state.venues}
+        />
         <Map />
       </div>
     );

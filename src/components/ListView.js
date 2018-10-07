@@ -31,16 +31,15 @@ class ListView extends Component {
             placeholder='Search Venues'
           />
         </div>
-        <ol className='venue-list'>
+        <ul className='venue-list'>
           {showingVenues.map((venue) => (
             <li key={venue.id} className='venue-list-item'>
               <div className='venue-details'>
                 <p>{venue.name}</p>
-                <p>{venue.location.address}</p>
               </div>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     );
   }
