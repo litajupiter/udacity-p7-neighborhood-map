@@ -32,11 +32,9 @@ class ListView extends Component {
           />
         </div>
         <ul className='venue-list'>
-          {showingVenues.map((venue) => (
-            <li key={venue.id} className='venue-list-item'>
-              <div className='venue-details'>
-                <p>{venue.name}</p>
-              </div>
+          {showingVenues.map((showingVenue) => (
+            <li key={showingVenue.venue.id} className='venue-list-item'>
+              <p>{showingVenue.venue.name}</p>
             </li>
           ))}
         </ul>
