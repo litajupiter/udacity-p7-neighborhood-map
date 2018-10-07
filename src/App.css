@@ -38,3 +38,12 @@ html, body {
   height: 100vh;
   width: 100%;
 }
+
+#list-venues {
+  position: absolute;
+  z-index: 100;
+  height: calc(100vh - 40px);
+  width: 325px;
+  max-width: 100%;
+  overflow-y: scroll;
+}

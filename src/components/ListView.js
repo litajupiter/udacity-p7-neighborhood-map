@@ -1,17 +1,46 @@
 import React, { Component } from 'react';
+import escapeRegExp from 'escape-string-regexp'
 
 class ListView extends Component {
+
+  state = {
+    query: ''
+  }
+
+  updateQuery = (query) => {
+    this.setState({ query: query.trim() })
+  }
+
   render() {
+    let showingVenues
+    if (this.state.query) {
+      const match = new RegExp(escapeRegExp(this.state.query), 'i')
+      showingVenues = this.props.venues.filter((venue) => match.test(venue.name))
+    } else {
+      showingVenues = this.props.venues
+    }
+
     return(
-      <div id="list-venues">
-        <div id="search-venues">
+      <div id='list-venues'>
+        <div className='list-venues-top'>
           <input
-            type="text"
-            placeholder="Search Venues"
+            className='search-venues'
+            type='text'
+            value={this.state.query}
+            onChange={(event) => this.updateQuery(event.target.value)}
+            placeholder='Search Venues'
           />
         </div>
-        <div id="venue-list">
-        </div>
+        <ol className='venue-list'>
+          {showingVenues.map((venue) => (
+            <li key={venue.id} className='venue-list-item'>
+              <div className='venue-details'>
+                <p>{venue.name}</p>
+                <p>{venue.location.address}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     );
   }
