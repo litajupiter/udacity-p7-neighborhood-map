@@ -40,7 +40,7 @@ class App extends Component {
         }, this.renderMap())
       })
       .catch(error => {
-        console.log("ERROR! " + error)
+        alert("ERROR! " + error)
       })
   }
 
