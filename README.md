@@ -6,6 +6,12 @@ Note: Service Worker will only work in a production environment.
 
 References: Udacity React and API Course Materials, Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony, Tutorial Requests: FEND Project 7-Walk Through & Complete Guide (LONG) YouTube video by Ryan Waite, the Udacity Front-End Web Developer Nanodegree Support Facebook Group, LatLong.net, Stack Overflow.
 
+##To start up the project in development mode:
+
+From your terminal, run npm start
+Install any dependencies using npm install
+The app should open in http://localhost:3000/
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
