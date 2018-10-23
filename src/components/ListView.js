@@ -33,9 +33,9 @@ class ListView extends Component {
             role="search"
           />
         </div>
-        <ul className='venue-list'>
+        <ul className='venue-list' aria-label='List of coffee shops near Harpa'>
           {showingVenues.map((showingVenue) => (
-            <li key={showingVenue.venue.id} className='venue-list-item'>
+            <li key={showingVenue.venue.id} tabIndex="0" aria-label={showingVenue.venue.name} role="menuitem" className='venue-list-item'>
               <p>{showingVenue.venue.name}</p>
             </li>
           ))}
