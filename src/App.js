@@ -50,13 +50,13 @@ class App extends Component {
       zoom: 14
     })
     const infowindow = new window.google.maps.InfoWindow()
-    this.state.venues.forEach(myVenue => {
-      const infoString = `<h4>${myVenue.venue.name}</h4><p>Street Address: ${myVenue.venue.location.address}</p><p>Distance from Harpa: ${myVenue.venue.location.distance} meters</p>`
+    this.state.venues.forEach((venue) => {
+      const infoString = `<h4>${venue.venue.name}</h4><p>Street Address: ${venue.venue.location.address}</p><p>Distance from Harpa: ${venue.venue.location.distance} meters</p>`
       const marker = new window.google.maps.Marker({
-        position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
+        position: {lat: venue.venue.location.lat, lng: venue.venue.location.lng},
         map: map,
-        title: myVenue.venue.name,
-        id: myVenue.venue.id,
+        title: venue.venue.name,
+        id: venue.venue.id,
         animation: window.google.maps.Animation.DROP
       })
       marker.addListener('click', function() {
