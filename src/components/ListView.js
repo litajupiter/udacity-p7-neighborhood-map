@@ -29,6 +29,8 @@ class ListView extends Component {
             value={this.state.query}
             onChange={(event) => this.updateQuery(event.target.value)}
             placeholder='Search Venues'
+            labelledby="placeholder"
+            role="search"
           />
         </div>
         <ul className='venue-list'>
