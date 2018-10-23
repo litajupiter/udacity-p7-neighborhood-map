@@ -15,7 +15,7 @@ class ListView extends Component {
     let showingVenues
     if (this.state.query) {
       const match = new RegExp(escapeRegExp(this.state.query), 'i')
-      showingVenues = this.props.venues.filter((venue) => match.test(venue.name))
+      showingVenues = this.props.venues.filter((venue) => match.test(venue.venue.name))
     } else {
       showingVenues = this.props.venues
     }
