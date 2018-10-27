@@ -90,6 +90,9 @@ function loadScript(url) {
   script.src = url
   script.async = true
   script.defer = true
+  script.onerror = function() {
+    alert("Error loading map!");
+  };
   index.parentNode.insertBefore(script, index)
 }
 
