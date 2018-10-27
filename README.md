@@ -4,7 +4,7 @@ This version of the Udacity Neighborhood Map Project is by Brianne Williams for 
 
 Note: Service Worker will only work in a production environment.
 
-References: Udacity React and API Course Materials, Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony, Tutorial Requests: FEND Project 7-Walk Through & Complete Guide (LONG) YouTube video by Ryan Waite, the Udacity Front-End Web Developer Nanodegree Support Facebook Group, LatLong.net, Stack Overflow.
+References: Udacity React and API Course Materials, Google Maps JavaScript API documentation, FourSquare API documentation, Udacity Neighborhood Map-Project Explained YouTube series by Elharony, Tutorial Requests: FEND Project 7-Walk Through & Complete Guide (LONG) YouTube video by Ryan Waite, React Webinar with Udacity's Andrew Wong, the Udacity Front-End Web Developer Nanodegree Support Facebook Group, LatLong.net, Stack Overflow.
 
 ##To start up the project in development mode:
 
