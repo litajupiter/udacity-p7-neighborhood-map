@@ -7,7 +7,8 @@ import axios from 'axios';
 class App extends Component {
 
   state = {
-    venues: []
+    venues: [],
+    markers: []
   }
 
   componentDidMount() {
@@ -52,7 +53,7 @@ class App extends Component {
     const infowindow = new window.google.maps.InfoWindow()
     this.state.venues.forEach((venue) => {
       const infoString = `<h4>${venue.venue.name}</h4><p>Street Address: ${venue.venue.location.address}</p><p>Distance from Harpa: ${venue.venue.location.distance} meters</p>`
-      const marker = new window.google.maps.Marker({
+      let marker = new window.google.maps.Marker({
         position: {lat: venue.venue.location.lat, lng: venue.venue.location.lng},
         map: map,
         title: venue.venue.name,
@@ -69,6 +70,7 @@ class App extends Component {
         infowindow.setContent(infoString)
         infowindow.open(map, marker);
       })
+      this.state.markers.push(marker);
     })
   }
 
@@ -77,6 +79,7 @@ class App extends Component {
       <div id="app-container">
         <ListView
           venues={this.state.venues}
+          markers={this.state.markers}
         />
         <Map />
       </div>
