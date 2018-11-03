@@ -4,20 +4,30 @@ import escapeRegExp from 'escape-string-regexp'
 class ListView extends Component {
 
   state = {
-    query: ''
+    query: '',
+    hiddenMarkers: []
   }
 
   updateQuery = (query) => {
     this.setState({ query: query })
   }
 
+  markerVisibility = (arr, boolean) => {
+    return arr.forEach(marker => marker.setVisible(boolean));
+  }
+
   render() {
-    let showingVenues
+    let showingVenues;
+    let hiddenMarkers;
+    this.props.markers.map(marker => marker.setVisible(true));
     if (this.state.query) {
       const match = new RegExp(escapeRegExp(this.state.query), 'i')
       showingVenues = this.props.venues.filter((venue) => match.test(venue.venue.name))
+      hiddenMarkers = this.props.markers.filter(marker => showingVenues.every(venue => venue.venue.name !== marker.title));
+      this.markerVisibility(hiddenMarkers, false);
     } else {
       showingVenues = this.props.venues
+      this.markerVisibility(this.props.markers, true);
     }
 
     return(
